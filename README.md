@@ -97,7 +97,7 @@
 
 
 # SQL Script
-  INSERT INTO [dbo].[Theatres] 
+  ```INSERT INTO [dbo].[Theatres] 
            ([Id]  
            ,[Title]  
            ,[Address]  
@@ -380,3 +380,4 @@ INSERT INTO [dbo].[Tickets]
            ,null
            ,GETDATE()
            ,'Insert')
+```
