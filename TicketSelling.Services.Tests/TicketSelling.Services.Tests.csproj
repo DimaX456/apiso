@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="xunit" Version="2.5.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicketSelling.Context.Tests\TicketSelling.Context.Tests.csproj" />
+    <ProjectReference Include="..\TicketSelling.Repositories\TicketSelling.Repositories.csproj" />
+    <ProjectReference Include="..\TicketSelling.Services\TicketSelling.Services.csproj" />
+    <ProjectReference Include="..\TicketSelling.Test.Extensions\TicketSelling.Test.Extensions.csproj" />
+  </ItemGroup>
+
+</Project>
