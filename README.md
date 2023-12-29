@@ -91,7 +91,7 @@
 
 
 
-  INSERT INTO [dbo].[Cinemas] 
+  INSERT INTO [dbo].[Theatres] 
            ([Id]  
            ,[Title]  
            ,[Address]  
@@ -102,15 +102,15 @@
            ,[UpdatedBy])  
      VALUES 
            ('c1207373-b0af-495c-a33f-d0fac1266e8a' 
-           ,N'Карофильм' 
-           ,N'пр. Юрия Гагарина, 1, Санкт-Петербург' 
+           ,N'Театр им. Комиссаржевской' 
+           ,N'ул. Итальянская, 19, Санкт-Петербург' 
            ,GETDATE() 
            ,'Insert' 
            ,null 
            ,GETDATE() 
            ,'Insert') 
 
-INSERT INTO [dbo].[Cinemas] 
+INSERT INTO [dbo].[Theatres] 
            ([Id] 
            ,[Title] 
            ,[Address] 
@@ -121,8 +121,8 @@ INSERT INTO [dbo].[Cinemas]
            ,[UpdatedBy]) 
      VALUES 
            ('0440e29d-7d0e-4d48-acf4-3ec4353c4f9e' 
-           ,N'Ленфильм' 
-           ,N'Байконурская ул., 14А, Санкт-Петербург' 
+           ,N'Театр на Литейном' 
+           ,N'Литейный просп., 51, Санкт-Петербург' 
            ,GETDATE() 
            ,'Insert' 
            ,null 
@@ -143,10 +143,10 @@ INSERT INTO [dbo].[Clients]
            ,[UpdatedBy]) 
      VALUES 
            ('edf6b122-3fc3-4793-978b-3fd42f840c45' 
-           ,'Insert@gmail.com' 
-           ,N'Кочетков' 
-           ,N'Денис' 
-           ,N'Александрович' 
+           ,'plzsadwd@gmail.com' 
+           ,N'Иванов' 
+           ,N'Дмитрий' 
+           ,N'Николаевич' 
            ,19 
            ,GETDATE() 
            ,'Insert' 
@@ -167,11 +167,11 @@ INSERT INTO [dbo].[Clients]
            ,[UpdatedAt] 
            ,[UpdatedBy]) 
      VALUES 
-           ('cb511c9f-3f6d-445d-9cc3-a62392949a6d' 
-           ,'Insert@yandex.ru' 
-           ,N'Малышева' 
-           ,N'Александра' 
-           ,N'Юрьевна' 
+           ('cb511c9f-3f6d-445d-9cc3-a62392949a6d'
+           ,'adsadfaefd@yandex.ru' 
+           ,N'Станислав' 
+           ,N'Валерьевич' 
+           ,N'Барецкий' 
            ,25 
            ,GETDATE() 
            ,'Insert' 
@@ -179,7 +179,7 @@ INSERT INTO [dbo].[Clients]
            ,GETDATE() 
            ,'Insert') 
 
-INSERT INTO [dbo].[Films] 
+INSERT INTO [dbo].[Performances] 
            ([Id] 
            ,[Title] 
            ,[Description] 
@@ -191,8 +191,8 @@ INSERT INTO [dbo].[Films]
            ,[UpdatedBy]) 
      VALUES 
            ('0c742592-0cd5-4cba-b76e-be17b1ed8e0b' 
-           ,N'Барби' 
-           ,N'Ничего такой фильмец!' 
+           ,N'Моя дорогая Hélène' 
+           ,N'Лауреат премии «Золотой софит» за лучшую работу актёра' 
            ,16 
            ,GETDATE() 
            ,'Insert' 
@@ -200,7 +200,7 @@ INSERT INTO [dbo].[Films]
            ,GETDATE() 
            ,'Insert') 
 
-INSERT INTO [dbo].[Films] 
+INSERT INTO [dbo].[Performances] 
            ([Id] 
            ,[Title]
            ,[Description]
@@ -212,7 +212,7 @@ INSERT INTO [dbo].[Films]
            ,[UpdatedBy])
      VALUES
            ('80f6b724-c314-449f-8569-437837fae723'
-           ,N'Елки 5'
+           ,N'Барышня-крестьянка'
            ,null
            ,12
            ,GETDATE()
@@ -274,9 +274,9 @@ INSERT INTO [dbo].[Staffs]
      VALUES
            ('560ea098-c735-49ef-aa14-4d96cb7649fd'
            ,0
-           ,N'Бажин'
-           ,N'Кирилл'
-           ,N'Андреевич'
+           ,N'Александр'
+           ,N'Максим'
+           ,N'Тыщенков'
            ,19
            ,GETDATE()
            ,'Insert'
@@ -299,9 +299,9 @@ INSERT INTO [dbo].[Staffs]
      VALUES
            ('c0f43b29-6a95-4814-9c11-9812c2f62aa0'
            ,1
-           ,N'Коноплев'
-           ,N'Анатолий'
-           ,N'Александрович'
+           ,N'Шуя'
+           ,N'Надежда'
+           ,N'Юрьевна'
            ,45
            ,GETDATE()
            ,'Insert'
@@ -312,8 +312,8 @@ INSERT INTO [dbo].[Staffs]
 INSERT INTO [dbo].[Tickets]
            ([Id]
            ,[HallId]
-           ,[CinemaId]
-           ,[FilmId]
+           ,[TheatreId]
+           ,[PerformanceId]
            ,[ClientId]
            ,[StaffId]
            ,[Row]
@@ -345,7 +345,7 @@ INSERT INTO [dbo].[Tickets]
 INSERT INTO [dbo].[Tickets]
            ([Id]
            ,[HallId]
-           ,[CinemaId]
+           ,[PerformanceId]
            ,[FilmId]
            ,[ClientId]
            ,[StaffId]
