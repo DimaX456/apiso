@@ -4,13 +4,13 @@
     Ticket <.. Hall
     Ticket <.. Theatre
     Ticket <.. Client
-    Ticket <.. Film
+    Ticket <.. Performance
     Ticket <.. Staff
     Staff .. Post
     BaseAuditEntity --|> Hall
     BaseAuditEntity --|> Theatre
     BaseAuditEntity --|> Client
-    BaseAuditEntity --|> Film
+    BaseAuditEntity --|> Performance
     BaseAuditEntity --|> Ticket
     BaseAuditEntity --|> Staff
     IEntity ..|> BaseAuditEntity
@@ -54,7 +54,7 @@
         +short Age
         +string? Email
     }
-    class Film {
+    class Performance {
         +string Title
         +string? Description
         +short Limitation
@@ -70,7 +70,7 @@
     class Ticket {
         +Guid HallId 
         +Guid TheatreID
-        +Guid FilmId
+        +Guid PerformanceID
         +Guid ClientId
         +Guid? StaffId
         +short Row
