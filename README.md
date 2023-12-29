@@ -2,13 +2,13 @@
  ```mermaid
     classDiagram
     Ticket <.. Hall
-    Ticket <.. Cinema
+    Ticket <.. Theatre
     Ticket <.. Client
     Ticket <.. Film
     Ticket <.. Staff
     Staff .. Post
     BaseAuditEntity --|> Hall
-    BaseAuditEntity --|> Cinema
+    BaseAuditEntity --|> Theatre
     BaseAuditEntity --|> Client
     BaseAuditEntity --|> Film
     BaseAuditEntity --|> Ticket
@@ -43,7 +43,7 @@
         +short Number
         +short NumberOfSeats
     }
-    class Cinema{
+    class Theatre{
         +string Title
         +string Address
     }
@@ -69,7 +69,7 @@
     }
     class Ticket {
         +Guid HallId 
-        +Guid CinemaId
+        +Guid TheatreID
         +Guid FilmId
         +Guid ClientId
         +Guid? StaffId
