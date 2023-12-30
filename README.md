@@ -8,7 +8,7 @@
 ```
 # Пример реального бизнес сценария 
 ```
-https://github.com/DimaX456/apiso/assets/106971904/68083d91-a460-40e5-bb35-f8cf80fa432f
+![alt text](https://github.com/DimaX456/apiso/assets/106971904/68083d91-a460-40e5-bb35-f8cf80fa432f)
 ```
 # Схема моделей
  ```mermaid
