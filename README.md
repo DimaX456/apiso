@@ -8,6 +8,7 @@
 ```
 # Пример реального бизнес сценария 
 ![Снимок экрана 2023-12-30 0048527878979](https://github.com/DimaX456/apiso/assets/106971904/3fd55266-94f8-4a7d-b96c-b6cfe7b27616)
+![1](https://github.com/DimaX456/apiso/assets/106971904/77f074b0-243a-4591-80b2-b33063a0f8b9)
 # Схема моделей
  ```mermaid
     classDiagram
